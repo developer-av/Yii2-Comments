@@ -1,0 +1,21 @@
+{
+    "name": "developer-av/yii2-comments",
+    "description": "Ecso Yii2-comments module.",
+    "keywords": ["yii2", "module", "comments", "ecso"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Vodolazhchenko",
+            "email": "developer-av@yandex.ru"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0",
+        "mihaildev/yii2-ckeditor": "*",
+        "mihaildev/yii2-elfinder": "*"
+    },
+    "autoload": {
+        "psr-4": { "developerav\\comments\\": "" }
+    }
+}
