@@ -1,0 +1,46 @@
+.dropzone
+{
+    width: 98%;
+    border: 2px dotted #777;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-Vborder-radius: 5px;
+    border-radius: 5px;
+    padding: 20px 0px;
+    cursor: pointer;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    -webkit-transition: .5s;
+    -khtml-Vtransition: .5s;
+    transition: .5s;
+    display: inline-block;
+}
+
+.dropzone:hover, .dropzoneHover
+{
+    padding: 25px 0px;
+    width: 100%;
+    color: #3c8dbc;
+    border-color: #3c8dbc;
+}
+
+.noDrop
+{
+    cursor: wait;
+}
+
+#preview-image img
+{
+    max-width: 100%;
+}
+
+#preview-image
+{
+    display: none;
+}
+
+#loadingIcon, #fileUploadContolBtn
+{
+    display: none;
+}

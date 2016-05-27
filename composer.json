@@ -14,7 +14,8 @@
         "yiisoft/yii2": "~2.0.0",
         "mihaildev/yii2-ckeditor": "*",
         "mihaildev/yii2-elfinder": "*",
-        "xj/yii2-imgareaselect-widget": "*"
+        "xj/yii2-imgareaselect-widget": "*",
+        "rmrevin/yii2-fontawesome": "~2.14"
     },
     "autoload": {
         "psr-4": { "developerav\\comments\\": "" }
