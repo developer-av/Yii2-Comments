@@ -13,7 +13,8 @@
     "require": {
         "yiisoft/yii2": "~2.0.0",
         "mihaildev/yii2-ckeditor": "*",
-        "mihaildev/yii2-elfinder": "*"
+        "mihaildev/yii2-elfinder": "*",
+        "xj/yii2-imgareaselect-widget": "*"
     },
     "autoload": {
         "psr-4": { "developerav\\comments\\": "" }
