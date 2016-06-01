@@ -6,6 +6,8 @@ use Yii;
 
 class Module extends \yii\base\Module {
 
+    public $path = 'upload/feedback/';
+
     public function init() {
         if (!isset(Yii::$app->i18n->translations['comments'])) {
             Yii::$app->i18n->translations['comments'] = [

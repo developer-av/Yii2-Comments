@@ -69,7 +69,6 @@ ImgAreaSelect::widget([
         'minWidth' => 300,
         'minHeight' => 300,
         'aspectRatio' => '1:1',
-//        'parent' => ($model->isNewRecord ? '#createModal' : '#updateModal').' .modal-content',
         'persistent' => true,
         'show' => true,
         'instance' => true,

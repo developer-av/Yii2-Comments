@@ -79,7 +79,6 @@ class DefaultController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->findModel($id);
-        $model->scenario = 'update';
         if ($model->load(Yii::$app->request->post())) {
             $model->file = UploadedFile::getInstance($model, 'file');
             $model->save();

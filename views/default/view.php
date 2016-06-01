@@ -25,6 +25,8 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
 
+    <div class="text-center"><?= Html::img(\Yii::getAlias('@web/'.\Yii::$app->controller->module->path).$model->photo, ['class' => 'img-circle']) ?></div>
+
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [

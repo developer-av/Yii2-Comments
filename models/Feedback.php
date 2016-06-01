@@ -96,7 +96,7 @@ class Feedback extends ActiveRecord {
     }
 
     public function deletePhoto() {
-        unlink(\Yii::getAlias('@frontendweb') . \Yii::getAlias('@upload/comments/') . $this->photo);
+        unlink(\Yii::getAlias(\Yii::$app->controller->module->path) . $this->photo);
     }
 
     /**
@@ -104,11 +104,11 @@ class Feedback extends ActiveRecord {
      * @param Comments $obg
      */
     private static function uploadFile($obg) {
-        if ($obg->scenario == 'update') {
-            unlink(\Yii::getAlias('@frontendweb') . \Yii::getAlias('@upload/comments/') . $obg->oldRecord->photo);
+        if (!empty($obg->oldRecord->photo)){
+            unlink(\Yii::getAlias(\Yii::$app->controller->module->path) . $obg->oldRecord->photo);
         }
         $obg->photo = Yii::$app->security->generateRandomString() . '.' . $obg->file->extension;
-        Image::open($obg->file->tempName)->useFallback(false)->crop($obg->x1, $obg->y1, $obg->x2 - $obg->x1, $obg->y2 - $obg->y1)->resize(220, 220)->save(\Yii::getAlias('@frontendweb') . \Yii::getAlias('@upload/comments/') . $obg->photo);
+        Image::open($obg->file->tempName)->useFallback(false)->crop($obg->x1, $obg->y1, $obg->x2 - $obg->x1, $obg->y2 - $obg->y1)->resize(220, 220)->save(\Yii::getAlias(\Yii::$app->controller->module->path) . $obg->photo);
     }
 
 }

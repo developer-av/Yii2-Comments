@@ -16,6 +16,8 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
 
     <h1><?= Html::encode($this->title) ?></h1>
 
+    <div class="text-center"><?= Html::img(\Yii::getAlias('@web/'.\Yii::$app->controller->module->path).$model->photo, ['class' => 'img-circle']) ?></div>
+
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>
