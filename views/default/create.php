@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\Feedback */
 
-$this->title = Yii::t('app', 'Create Feedback');
+$this->title = Yii::t('comments', 'Создать отзыв');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Feedbacks'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

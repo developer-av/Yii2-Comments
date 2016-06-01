@@ -89,9 +89,9 @@ class Feedback extends ActiveRecord {
      */
     public function attributeLabels() {
         return [
-            'author' => Yii::t('app', 'Author'),
-            'text' => Yii::t('app', 'Text'),
-            'created_at' => Yii::t('app', 'created_at'),
+            'author' => Yii::t('comments', 'Автор'),
+            'text' => Yii::t('comments', 'Текст'),
+            'created_at' => Yii::t('comments', 'Создан'),
         ];
     }
 

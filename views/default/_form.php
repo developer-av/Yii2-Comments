@@ -43,7 +43,7 @@ $this->registerJs('
     <?= $form->field($model, 'y2', ['options' => ['style' => 'display: none;']])->hiddenInput(['id' => 'y2Cord'])->label(false); ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? Yii::t('comments', 'Создать') : Yii::t('comments', 'Изменить'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
@@ -54,7 +54,7 @@ $this->registerJs('
             <i id="uploadIcon" class="fa fa-cloud-upload fa-5x"></i>
             <i id="loadingIcon" class="fa fa-spinner fa-spin fa-5x"></i>
             <br/>
-            Перетащите сюда фотографию, или нажмите чтобы загрузка их.
+            <?= Yii::t('comments', 'Перетащите сюда фотографию, или нажмите чтобы загрузка ее.') ?>
             <br/>
             <span class="text-danger" id="upload-error"></span>
         </label>

@@ -8,7 +8,7 @@ use yii\helpers\StringHelper;
 /* @var $searchModel backend\models\FeedbackSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Feedbacks');
+$this->title = Yii::t('comments', 'Отзывы');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="feedback-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Feedback'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('comments', 'Создать отзыв'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
