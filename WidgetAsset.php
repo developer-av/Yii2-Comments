@@ -14,15 +14,13 @@ use yii\web\AssetBundle;
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class AppAsset extends AssetBundle {
+class WidgetAsset extends AssetBundle {
 
     public $sourcePath = '@vendor/developer-av/yii2-comments/assets';
     public $baseUrl = '@web';
     public $css = [
-        'style.css',
     ];
     public $js = [
-        'main.js',
     ];
 
 }
