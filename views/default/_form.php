@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use app\widgets\imgareaselect\ImgAreaSelect;
+use developerav\comments\widgets\imgareaselect\ImgAreaSelect;
 use xj\imgareaselect\ImgareaselectAsset;
 use developerav\comments\AppAsset;
 
@@ -26,7 +26,7 @@ $this->registerJs('
 
 <div class="feedback-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['id' => $model->isNewRecord ? 'createForm' : 'updateForm']); ?>
 
     <?= $form->field($model, 'author')->textInput(['maxlength' => true]) ?>
 
@@ -83,10 +83,9 @@ ImgAreaSelect::widget([
 $this->registerJs("
     input = $('#uploadimage')[0];
     $('#" . ($model->isNewRecord ? 'createForm' : 'updateForm') . "').on('afterValidateAttribute', function (buff, buff, msg) {
-        console.log('тут');
     if (msg.length === 0)
     {
-        if (buff.id == 'uploadimage')
+        if (buff.input == '#uploadimage')
         {
             if (input.files && input.files[0]) {
                 reader.readAsDataURL(input.files[0]);

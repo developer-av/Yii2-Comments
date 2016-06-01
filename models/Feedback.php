@@ -5,6 +5,7 @@ namespace developerav\comments\models;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
+use Gregwar\Image\Image;
 
 /**
  * This is the model class for table "feedback".

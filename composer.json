@@ -13,7 +13,8 @@
     "require": {
         "yiisoft/yii2": "~2.0.0",
         "xj/yii2-imgareaselect-widget": "*",
-        "rmrevin/yii2-fontawesome": "~2.14"
+        "rmrevin/yii2-fontawesome": "~2.14",
+        "gregwar/image": "2.*"
     },
     "autoload": {
         "psr-4": { "developerav\\comments\\": "" }
