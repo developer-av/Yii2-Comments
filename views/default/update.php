@@ -6,9 +6,9 @@ use yii\helpers\Html;
 /* @var $model common\models\Feedback */
 
 $this->title = Yii::t('comments', 'Изменить отзыв'). ': ' . $model->author;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Feedbacks'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('comments', 'Отзывы'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->author, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = Yii::t('app', 'Update');
+$this->params['breadcrumbs'][] = Yii::t('comments', 'Изменить');
 ?>
 <div class="feedback-update">
 

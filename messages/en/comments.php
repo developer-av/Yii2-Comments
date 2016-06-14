@@ -8,6 +8,7 @@ return [
     'Создан' => 'Сreated at',
     'Создать' => 'Сreate',
     'Изменить' => 'Update',
+    'Удалить' => 'Delete',
     'Перетащите сюда фотографию, или нажмите чтобы загрузка ее.' => 'Drag a photo here or click to download it.',
     'Изменить отзыв' => 'Update feedback',
     'Создать отзыв' => 'Create feedback',
