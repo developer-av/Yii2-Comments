@@ -57,7 +57,7 @@ $this->registerCss('
                         } ?>">
                 <div class="row">
                     <div class="col-md-4">
-    <?= Html::img(\yii::$app->params['feedbackPath'] . $model->photo, ['alt' => 'Ecso для ' . $model->author]) ?>
+    <?= Html::img('/'.\yii::$app->params['feedbackPath'] . $model->photo, ['alt' => 'Ecso для ' . $model->author]) ?>
                     </div>
                     <div class="col-md-8">
                         <h3><?= $model->author ?></h3>
