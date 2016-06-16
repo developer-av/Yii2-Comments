@@ -61,6 +61,7 @@ class DefaultController extends Controller {
      */
     public function actionCreate() {
         $model = new Feedback();
+        $model->scenario = 'create';
         if ($model->load(Yii::$app->request->post())) {
             $model->file = UploadedFile::getInstance($model, 'file');
             $model->save();
@@ -79,6 +80,7 @@ class DefaultController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->findModel($id);
+        $model->scenario = 'update';
         if ($model->load(Yii::$app->request->post())) {
             $model->file = UploadedFile::getInstance($model, 'file');
             $model->save();

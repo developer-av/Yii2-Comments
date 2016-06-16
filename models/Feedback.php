@@ -68,10 +68,10 @@ class Feedback extends ActiveRecord {
      */
     public function rules() {
         return [
-            [['author', 'text'], 'required'],
-            [['created_at'], 'integer'],
-            [['author', 'text'], 'string', 'max' => 255],
-            [['x1', 'y1', 'x2', 'y2'], 'safe'],
+            [['author', 'text'], 'required', 'on' => ['create', 'update']],
+            [['created_at'], 'integer', 'on' => ['create', 'update']],
+            [['author', 'text'], 'string', 'max' => 255, 'on' => ['create', 'update']],
+            [['x1', 'y1', 'x2', 'y2'], 'safe', 'on' => ['create', 'update']],
             [
                 ['file'],
                 'image',
@@ -79,8 +79,25 @@ class Feedback extends ActiveRecord {
                 'minHeight' => 300,
                 'minWidth' => 300,
                 'maxSize' => 1024 * 1024 * 10, //10Мб
-                'skipOnEmpty' => false
+                'skipOnEmpty' => false,
+                'on' => ['create'],
             ],
+            [
+                ['file'],
+                'image',
+                'extensions' => ['png', 'jpg', 'jpeg', 'gif'],
+                'minHeight' => 300,
+                'minWidth' => 300,
+                'maxSize' => 1024 * 1024 * 10, //10Мб
+                'on' => ['update'],
+            ],
+        ];
+    }
+
+    public function scenarios() {
+        return [
+            'create' => ['author', 'text', 'x1', 'y1', 'x2', 'y2', 'file'],
+            'update' => ['author', 'text', 'x1', 'y1', 'x2', 'y2', 'file'],
         ];
     }
 
@@ -104,7 +121,7 @@ class Feedback extends ActiveRecord {
      * @param Comments $obg
      */
     private static function uploadFile($obg) {
-        if (!empty($obg->oldRecord->photo)){
+        if (!empty($obg->oldRecord->photo)) {
             unlink(\Yii::getAlias(\Yii::$app->controller->module->path) . $obg->oldRecord->photo);
         }
         $obg->photo = Yii::$app->security->generateRandomString() . '.' . $obg->file->extension;
