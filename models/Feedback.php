@@ -76,8 +76,6 @@ class Feedback extends ActiveRecord {
                 ['file'],
                 'image',
                 'extensions' => ['png', 'jpg', 'jpeg', 'gif'],
-                'minHeight' => 300,
-                'minWidth' => 300,
                 'maxSize' => 1024 * 1024 * 10, //10Мб
                 'skipOnEmpty' => false,
                 'on' => ['create'],
@@ -86,8 +84,6 @@ class Feedback extends ActiveRecord {
                 ['file'],
                 'image',
                 'extensions' => ['png', 'jpg', 'jpeg', 'gif'],
-                'minHeight' => 300,
-                'minWidth' => 300,
                 'maxSize' => 1024 * 1024 * 10, //10Мб
                 'on' => ['update'],
             ],
